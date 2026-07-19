@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    
+    <!-- سئو و متا تگ‌ها -->
+    <title>🐍 بازی مار آنلاین | بازی کلاسیک Snake تحت وب</title>
+    <meta name="description" content="بازی مار کلاسیک و نوستالژیک را به صورت آنلاین و رایگان بازی کنید. با کنترل لمسی و کیبورد، امتیاز خود را ثبت کنید. ساخته شده توسط محمدعلی عباسپور.">
+    <meta name="keywords" content="بازی مار, snake game, بازی آنلاین, بازی مرورگر, بازی نوستالژیک, محمدعلی عباسپور, intellsoft">
+    <meta name="author" content="محمدعلی عباسپور">
+    <link rel="canonical" href="https://www.intellsoft.ir/snake/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="🐍 بازی مار آنلاین">
+    <meta property="og:description" content="مار کلاسیک را همین حالا در مرورگر بازی کنید! کنترل لمسی و کیبورد، گرافیک چشمنواز.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.intellsoft.ir/snake/">
+    <meta property="og:image" content="https://www.intellsoft.ir/snake/og-image.png">
+    <meta property="og:locale" content="fa_IR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="🐍 بازی مار آنلاین">
+    <meta name="twitter:description" content="مار کلاسیک را همین حالا بازی کنید!">
+    <meta name="twitter:image" content="https://www.intellsoft.ir/snake/og-image.png">
+    
+    <link rel="stylesheet" href="style.css?v=2.0.1">
+</head>
+<body>
+    <!-- داده‌های ساخت‌یافته JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "بازی مار آنلاین",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Web",
+      "description": "بازی کلاسیک مار (Snake) به صورت تحت وب با کنترل لمسی و کیبورد. امتیاز خود را ثبت کنید.",
+      "url": "https://www.intellsoft.ir/snake/",
+      "author": {
+        "@type": "Person",
+        "name": "محمدعلی عباسپور",
+        "url": "https://intellsoft.ir"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "IRR"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "محمدعلی عباسپور",
+      "url": "https://intellsoft.ir",
+      "jobTitle": "توسعه‌دهنده نرم‌افزار",
+      "sameAs": [
+        "https://intellsoft.ir"
+      ]
+    }
+    </script>
+
+    <div id="app">
+        <header class="app-header">
+            <h1>🐍 بازی مار</h1>
+            <div class="game-controls">
+                <button id="new-game-btn" class="btn btn-primary">بازی جدید</button>
+                <select id="speed-select" class="btn">
+                    <option value="slow">آسان</option>
+                    <option value="medium" selected>متوسط</option>
+                    <option value="fast">سخت</option>
+                </select>
+                <button id="mute-btn" class="btn mute-btn" title="قطع/وصل صدا">🔊</button>
+            </div>
+            <div class="game-info">
+                <div class="score">⭐ امتیاز: <span id="score">0</span></div>
+                <div class="best">🏆 بهترین: <span id="best-score">0</span></div>
+            </div>
+        </header>
+        <main class="container">
+            <div class="board-wrapper">
+                <canvas id="game-canvas"></canvas>
+                <div id="game-over-message" class="game-over" style="display:none;">
+                    <p>بازی تمام شد!</p>
+                    <button id="restart-btn" class="btn btn-primary">🔄 شروع دوباره</button>
+                </div>
+            </div>
+            <div class="mobile-controls">
+                <button class="dir-btn" data-dir="up">▲</button>
+                <div dir="ltr">
+                    <button class="dir-btn" data-dir="left">◀</button>
+                    <button class="dir-btn" data-dir="down">▼</button>
+                    <button class="dir-btn" data-dir="right">▶</button>
+                </div>
+            </div>
+        </main>
+        <footer class="app-footer">
+            <p>🎮 ساخته شده با ❤️ توسط <a href="https://intellsoft.ir" target="_blank" rel="author">محمدعلی عباسپور</a> | <a href="https://intellsoft.ir" target="_blank">intellsoft.ir</a></p>
+        </footer>
+    </div>
+    <div id="app-message" style="display:none; position:fixed; top:10px; left:50%; transform:translateX(-50%); background:#333; color:#fff; padding:12px 24px; border-radius:8px; z-index:9999; font-family:Tahoma, sans-serif; max-width:90%; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.3);"></div>
+    
+    <script src="script.js?v=2.0.1"></script>
+</body>
+</html>
